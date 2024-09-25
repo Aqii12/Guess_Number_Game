@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video and Audio Sync</title>
     <link rel="stylesheet" href="style.css">
-    <title>Number Guessing Game</title>
 </head>
 <body>
     <div class="container">
@@ -13,7 +13,7 @@
         <button onclick="setDifficulty('easy')">Easy</button>
         <button onclick="setDifficulty('medium')">Medium</button>
         <button onclick="setDifficulty('hard')">Hard</button>
-        
+
         <p>Guess a number based on the difficulty you selected.</p>
         <input type="number" id="guessInput" placeholder="Enter your guess" disabled>
         <button onclick="checkGuess()" disabled id="guessButton">Guess</button>
@@ -21,10 +21,20 @@
         <p id="guessedNumbers"></p>
         <p id="numberOfGuesses"></p>
 
-        
+        <!-- Audio element for success sound -->
         <audio id="successSound" src="7crore.MP3" preload="auto"></audio>
+
+        <!-- Video element for wrong answer -->
+        <video id="wrongAnswerVideo" muted>
+            <source src="hahah.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Audio element for separate voice -->
+        <audio id="wrongAnswerAudio" src="heehhe.MP3" preload="auto"></audio>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
 
